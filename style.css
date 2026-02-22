@@ -1,0 +1,120 @@
+/* Reset and basic font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body styles */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dbe2ea;
+}
+
+/* Card container */
+.card {
+  width: 380px;
+  height: 220px;
+  border-radius: 18px;
+  padding: 20px;
+  background: linear-gradient(145deg, #000, #111);
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card texture overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  transform: rotate(10deg);
+}
+
+/* Top part: logo and chip */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #eb001b;
+}
+
+.yellow {
+  background: #f79e1b;
+  margin-left: -10px;
+}
+
+.brand {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* Chip */
+.chip {
+  width: 45px;
+  height: 32px;
+  background: gold;
+  border-radius: 6px;
+}
+
+/* Card number */
+.card-number {
+  margin: 35px 0 25px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Bottom part: card holder and valid thru */
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.label {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.card-bottom h3 {
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
